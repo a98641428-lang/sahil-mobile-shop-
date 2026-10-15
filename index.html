@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil Mobile Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="logo" href="#home">SAHIL <span>MOBILE SHOP</span></a>
+    <div class="links">
+      <a href="#home">Home</a><a href="#products">Mobiles</a><a href="#about">About</a>
+      <a href="#videos">Videos</a><a href="#contact">Contact</a>
+    </div>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Cart <b id="cartCount">0</b></button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="eyebrow">PREMIUM MOBILE STORE</p>
+    <h1>Find Your <span>Perfect Phone.</span></h1>
+    <p class="hero-text">Latest smartphones, accessories and great deals — all in one place.</p>
+    <a class="gold-btn" href="#products">Shop Mobiles →</a>
+    <a class="outline-btn" href="#contact">Contact Us</a>
+  </div>
+  <div class="hero-phone">📱</div>
+</section>
+
+<section id="products" class="section">
+  <div class="section-head"><div><p class="eyebrow">OUR STORE</p><h2>Featured Mobiles</h2></div></div>
+  <div class="products" id="productsGrid"></div>
+</section>
+
+<section id="about" class="about section">
+  <div><p class="eyebrow">ABOUT US</p><h2>Sahil Mobile Shop</h2>
+  <p>Welcome to Sahil Mobile Shop — your online destination for smartphones and mobile accessories. We focus on a clean shopping experience, attractive deals and helpful customer service.</p>
+  <div class="stats"><div><b>100%</b><small>Online Ready</small></div><div><b>24/7</b><small>Order Requests</small></div><div><b>HD</b><small>Product Photos</small></div></div>
+  </div>
+</section>
+
+<section id="videos" class="section">
+  <p class="eyebrow">WATCH & DISCOVER</p><h2>Latest Videos</h2>
+  <div class="video-box"><div class="play">▶</div><p>Add your YouTube video here</p><small>Replace this section with your own video link.</small></div>
+</section>
+
+<section id="contact" class="contact section">
+  <div><p class="eyebrow">GET IN TOUCH</p><h2>Contact Sahil Mobile Shop</h2>
+  <p>For product availability, prices and orders, contact us directly.</p>
+  <div class="socials"><a href="#" class="gold-btn">▶ YouTube</a><a href="#" class="outline-btn">♪ TikTok</a></div>
+  </div>
+  <form onsubmit="sendOrder(event)">
+    <input id="name" placeholder="Your name" required>
+    <input id="phone" placeholder="Phone / WhatsApp" required>
+    <textarea id="message" placeholder="What mobile are you looking for?" required></textarea>
+    <button class="gold-btn" type="submit">Send Order Request</button>
+  </form>
+</section>
+</main>
+
+<div id="cart" class="cart-panel">
+  <button class="close" onclick="toggleCart()">×</button><h2>Your Cart</h2>
+  <div id="cartItems"></div><div class="total">Total: <span id="total">Rs. 0</span></div>
+  <button class="gold-btn" onclick="checkout()">Order on WhatsApp</button>
+</div>
+
+<footer>© 2026 Sahil Mobile Shop · Built with a premium black & gold style.</footer>
+<script src="script.js"></script>
+</body></html>
